@@ -1,5 +1,5 @@
 local M = {}
- 
+
 -- Function to list buffers sorted by number
 local function list_buffers_sorted_by_number()
     local buffers = vim.api.nvim_list_bufs()
