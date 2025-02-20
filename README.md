@@ -13,7 +13,7 @@ return {
         vim.api.nvim_set_hl(0, 'BuffledBufferNumber', { bg = '#2e2a27' })
         vim.api.nvim_set_hl(0, 'BuffledBufferName', { bg = '#2e2a27' })
         vim.api.nvim_set_hl(0, 'BufferModified', { fg = '#FF0000' })
-        require('jirbuffled').setup {}
+        require('jirbuffled.setup').setup()
     end,
 }
 
