@@ -14,7 +14,7 @@ local function list_buffers_sorted_by_number()
     table.insert(highlights, { 1, 2, -1, 'Function' }) -- Highlight the header with the same color as the numbers
 
     for _, buf in ipairs(buffers) do
-        if vim.api.nvim_buf_is_valid(buf) and vim.api.nvim_buf_get_option(buf, 'filetype') ~= 'buffled' then
+        if vim.api.nvim_buf_is_valid(buf) and vim.bo[buf].buflisted and vim.bo[buf].buftype == '' and vim.bo[buf].filetype ~= 'buffled' then
             local buf_name = vim.api.nvim_buf_get_name(buf)
             if buf_name == '' then
                 buf_name = '[No Name]'
